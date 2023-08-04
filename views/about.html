@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is about page</title>
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+</head>
+<style>
+    .contn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .purpose {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(43, 109, 153);
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 80px;
+    }
+
+    .purpose h2 {
+        font-size: 35px;
+        color: rgb(186, 217, 238);
+        padding-bottom: 18px;
+    }
+
+    .p1 {
+        width: 650px;
+        font-size: 18px;
+        padding-left: 170px;
+        padding-right: 170px;
+        color: rgb(239, 243, 252);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .obj {
+        border: 2px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(236, 236, 249);
+        color: rgb(70, 43, 97);
+    }
+
+    .d1 {
+        padding: 20px;
+        margin: 25px;
+        background-color: white;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+    }
+
+    .objh2 {
+        font-size: 30px;
+        padding-bottom: 15px;
+        color: rgb(251, 251, 252);
+        position: relative;
+        left: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .d1 h2 {
+        font-size: 20px;
+    }
+
+    p {
+        color: black;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(248, 245, 243);
+    }
+
+    .team h2 {
+        margin-top: 30px;
+        font-size: 30px;
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .members {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid blue; */
+        margin: 16px;
+        padding: 10px;
+        width: 98%;
+        height: 97%;
+    }
+
+    .mem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        padding: 15px;
+        margin: 13px;
+        background-color: rgb(232, 229, 248);
+    }
+
+    .cont2 {
+        /* border: 2px solid red; */
+        /* background-color: white; */
+        margin-left: 100px;
+    }
+
+    .background {
+        background: rgba(0, 0, 0, 0.7) url('../static/img/donate.webp');
+        background-size: cover;
+        background-blend-mode: darken;
+        padding-top: 30px;
+    }
+
+    .name {
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px
+    }
+</style>
+
+<body>
+    <nav class="navbar ">
+        <div class="logo">
+            <img src="../static/img/logo.jpg" alt="Error" height="50px" width="50px">
+        </div>
+        <div>
+            <ul class="navlist">
+                <li><a href="/">Home</a></li>
+                <li><a href="/donate">Donate</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                <li><a href="/join">Join us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contn">
+        <div class="purpose">
+            <h2>Purpose</h2>
+            <p class="p1">Our motive is to help needy people. Our website provides a convenient way to contribute/donate
+                your love in the form of need.With trust transperancy and empathy we want to be a way for people to help
+                needy community.
+        </div>
+        <div class="obj background">
+            <h2 class="objh2">Our Objectives</h2>
+            <div class="cont2">
+                <div class="d1">
+                    <h2>
+                        SERVING THE DEPRIVED
+                    </h2>
+                    <P>
+                        Helping the society and a small role of yours in their lives.
+                    </P>
+                </div>
+                <div class="d1">
+                    <h2>
+                        WOMEN EMPOWERMENT
+                    </h2>
+                    <P>
+                        Job openings for women around us and financial stability
+                    </P>
+                </div>
+                <div class="d1">
+                    <h2>
+                        REDUCE POLLUTION
+                    </h2>
+                    <P>
+                        Cloth donation promotes environmental sustainability by extending the lifespan of clothes.
+                    </P>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <h2>
+                Meet Our Team
+            </h2>
+            <div class="members">
+                <div class="mem">
+                    <div class="img">
+                        <img src="../static/img/snigdha.jpeg" alt="error" height="150px" width="150px">
+                    </div>
+                    <div class="name">
+                        <p>Snigdha De</p>
+                    </div>
+                    <div class="role">
+                        manager
+                    </div>
+                </div>
+                <div class="mem">
+                    <div class="img">
+                        <img src="../static/img/IMG-20221231-WA0077.jpg" alt="error" height="150px" width="150px">
+                    </div>
+                    <div class="name">
+                        <p>Snehal Lande</p>
+                    </div>
+                    <div class="role">
+                        manager
+                    </div>
+                </div>
+                <div class="mem">
+                    <div class="img">
+                        <img src="../static/img/srushti.jpeg" alt="error" height="150px" width="150px">
+                    </div>
+                    <div class="name">
+                        <p>Srushti Shirsat</p>
+                    </div>
+                    <div class="role">
+                        manager
+                    </div>
+                </div>
+                <div class="mem">
+                    <div class="img">
+                        <img src="../static/img/gauri.jpeg" alt="error" height="150px" width="150px">
+                    </div>
+                    <div class="name">
+                        <p>Gauri Shinde</p>
+                    </div>
+                    <div class="role">
+                        manager
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

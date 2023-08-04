@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is home page</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .genderc {
+        display: flex;
+        flex-direction: row;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        background-color: rgb(228, 227, 227);
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #clothes-container {
+        margin-top: 10px;
+    }
+
+    .cloth {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .remove-cloth {
+        color: red;
+        cursor: pointer;
+    }
+
+    .head {
+        width: 300px;
+        height: 40px;
+        color: white;
+        font-style: normal;
+        font-size: 29px;
+        position: relative;
+        left: 468px;
+    }
+
+    .head p {
+
+        position: relative;
+        bottom: 12px;
+    }
+
+    .details {
+        border: 2px solid black;
+        width: 700px;
+        position: relative;
+        left: 320px;
+        margin-top: 20px;
+        background-color: white;
+    }
+
+    .background1 {
+        background: rgba(0, 0, 0, 0.7) url('../static/img/blue-red-background.jpg');
+        background-size: cover;
+        background-blend-mode: darken;
+        padding-top: 30px;
+    }
+</style>
+
+<body>
+    <div class="cont background1">
+        <div class="head">
+            <P>Pickup From Doorstep</P>
+        </div>
+        <div class="details">
+            <form action="/opt1" method="post">
+
+                <!-- <label for="name">Name:</label> -->
+                <input type="text" id="name" name="name" placeholder="Name" required >
+
+                <!-- <label for="email">Email:</label> -->
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <!-- <label for="phone">Phone:</label> -->
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+
+                <!-- <label for="address">Address:</label> -->
+                <textarea id="address" name="address" placeholder="Address" required></textarea>
+
+                <h2>Clothes Donation Details:</h2>
+                <div id="clothes-container">
+                    <div class="cloth">
+                        <label for="gender">Select gender:</label>
+                        <div class="genderc">
+                            <input type="checkbox" name="gender" value="male">
+                            <label for="gender">Male</label>
+
+                            <input type="checkbox" name="gender" value="female">
+                            <label for="gender">Female</label>
+                        </div>
+
+                        <label for="clothcondition-1">Condition:</label>
+                        <select id="clothcondition-1" name="clothcondition" required>
+                            <option value="" disabled selected>Select condition</option>
+                            <option value="New">New</option>
+                            <option value="Gently Used">Gently Used</option>
+                            <option value="Worn">Worn</option>
+                        </select>
+                        <label for="agegroup">Agegroup</label>
+                        <select name="agegroup">
+                            <option value="under-5">Under 5</option>
+                            <option value="5-15">5-15</option>
+                            <option value="16-25">16-25</option>
+                            <option value="26-35">26-35</option>
+                            <option value="over-35">Over 55</option>
+                        </select>
+
+                        <label for="clothcategory1">Category</label>
+                        <select id="clothcategory1" name="clothcategory" required>
+                            <option value="" disabled selected>Select category</option>
+                            <option value="T-shirt">T-shirt</option>
+                            <option value="Trouser">Trouser</option>
+                            <option value="Salwaar Kameez">Salwaar Kameez</option>
+                            <option value="Kurta">Kurta</option>
+                            <option value="Jeans">Jeans</option>
+                            <option value="Sweater">Sweater</option>
+                            <option value="Sari">Sari</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="button" id="add-cloth">Add Another Cloth</button>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const addButton = document.getElementById("add-cloth");
+        const clothesContainer = document.getElementById("clothes-container");
+
+        let clothCounter = 1;
+
+        addButton.addEventListener("click", function () {
+            clothCounter++;
+
+            const clothDiv = document.createElement("div");
+            clothDiv.className = "cloth";
+
+            clothDiv.innerHTML = `
+     
+
+            <label for="gender">Select gender:</label>
+                        <div class="genderc">
+                            <input type="checkbox" name="gender" value="male">
+                            <label for="gender">Male</label>
+
+                            <input type="checkbox" name="gender" value="female">
+                            <label for="gender">Female</label>
+                        </div>
+
+      <label for="clothcondition-${clothCounter}">Condition:</label>
+      <select id="clothcondition-${clothCounter}" name="clothcondition" required>
+        <option value="" disabled selected>Select condition</option>
+        <option value="New">New</option>
+        <option value="Gently Used">Gently Used</option>
+        <option value="Worn">Worn</option>
+      </select>
+      <label for="age-group">Agegroup</label>
+                        <select name="agegroup">
+                            <option value="under-5">Under 5</option>
+                            <option value="5-15">5-15</option>
+                            <option value="16-25">16-25</option>
+                            <option value="26-35">26-35</option>
+                            <option value="over-35">Over 55</option>
+                        </select>
+        <label for="clothcategory1">Category</label>
+      <select id="clothcategory1" name="clothcategory" required>
+                            <option value="" disabled selected>Select category</option>
+                            <option value="T-shirt">T-shirt</option>
+                            <option value="Trouser">Trouser</option>
+                            <option value="Salwaar Kameez">Salwaar Kameez</option>
+                            <option value="Kurta">Kurta</option>
+                            <option value="Jeans">Jeans</option>
+                            <option value="Sweater">Sweater</option>
+                            <option value="Sari">Sari</option>
+                        </select>
+      <span class="remove-cloth" onclick="removeCloth(this)">Remove</span>
+    `;
+
+            clothesContainer.appendChild(clothDiv);
+        });
+
+        window.removeCloth = function (element) {
+            element.parentNode.remove();
+        };
+    });
+
+</script>
+
+</html>
