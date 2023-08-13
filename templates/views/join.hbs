@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <style>
+  
    .container {
   display: flex;
   justify-content: center;
@@ -38,7 +39,6 @@
   display: block;
   margin-bottom: 5px;
 }
-
 .form-group input[type="text"],
 .form-group input[type="email"] {
   width: 90%;
@@ -78,22 +78,11 @@ button[type="submit"]:hover {
         background-blend-mode: darken;
         padding-top: 30px;
 }
+
+
 </style>
 <body>
-    <nav class="navbar ">
-        <div class="logo">
-            <img src="../static/img/logo.jpg" alt="Error" height="50px" width="50px">
-        </div>
-        <div>
-            <ul class="navlist">
-                <li><a href="/">Home</a></li>
-                <li><a href="/donate">Donate</a></li>
-                <li><a href="/about">About us</a></li>
-                <li><a href="/contact">Contact us</a></li>
-                <li><a href="/join">Join us</a></li>
-            </ul>
-        </div>
-    </nav>
+    {{>nav}}
     <div class="container back">
         <form  action="/join" method="post" class="join-form">
           <h2>Join Us</h2>

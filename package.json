@@ -4,7 +4,9 @@
   "description": "This is a popular website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js -e js,hbs,css",
+    "dev": "nodemon src/app.js -e js,hbs,css"
   },
   "author": "Snehal",
   "license": "ISC",
@@ -12,7 +14,9 @@
     "body-parser": "^1.20.2",
     "consolidate": "^0.16.0",
     "express": "^4.18.2",
+    "hbs": "^4.2.0",
     "mongoose": "^7.1.0",
+    "nodemon": "^3.0.1",
     "pug": "^3.0.2",
     "swig": "^1.4.2"
   }

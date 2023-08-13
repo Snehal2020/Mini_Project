@@ -1,5 +1,6 @@
 const http = require('http')
 const fs = require('fs')
+const hbs=require("hbs")
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -8,7 +9,7 @@ const about = fs.readFileSync('./about.html');
 const join = fs.readFileSync('./join.html');
 const contact = fs.readFileSync('./contact.html');
 const donate = fs.readFileSync('./donate.html');
-
+hbs.registerPartials(path.join(__dirname, "../templates/partials"));
 const server = http.createServer((req, res) => {
     console.log(req.url)
     url = req.url;

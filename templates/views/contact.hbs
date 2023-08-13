@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is home page</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+  <style>
+    .para {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.c_boxmain {
+    height: 250px;
+}
+
+.c_boxmain p {
+    position: relative;
+    bottom: 60px;
+}
+
+.big {
+    font-size: 34px;
+    font-style: normal;
+}
+
+.mid {
+    font-size: 19px;
+}
+
+.details {
+    margin-left: 100px;
+    position: relative;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 550px;
+    border-radius: 10px;
+}
+
+#de {
+    padding: 10px;
+    color: aliceblue;
+    display: flex;
+    width: 460px;
+}
+
+#de p {
+    padding: 10px;
+}
+
+.p {
+    color: rgb(71, 139, 235);
+}
+.right {
+    position: relative;
+    bottom: 480px;
+    left: 770px;
+    /* top: 30px;
+    right: 30px; */
+    color: aliceblue;
+    background-color: rgb(91, 92, 92);
+    padding: 20px;
+    width: 400px;
+    height: 260px;
+}
+
+.head1 {
+    width: 460px;
+    font-size: 26px;
+    padding: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 1px;
+    background-color: rgb(228, 227, 227);
+    font-size: 14px;
+}
+
+  </style>
+<body>
+   {{>nav}}
+    <section class="vision c_background">
+        <div class="c_boxmain">
+            <p class="c_big">
+                Contact us
+            </p>
+        </div>
+        <div class="details">
+            <div class="add" id="de">
+                <img src="../static/img/loc.png" alt="">
+                <p class="p">
+                    Address
+                </p>
+                <p>Kasba Peth 411011 Shivajinagar,Pune Maharashtra</p>
+            </div>
+            <div class="phone" id="de">
+                <img src="../static/img/pngegg.png" alt="">
+                <p class="p">Phone</p>
+                <p>7498459713</p>
+            </div>
+            <div class="email" id="de">
+                <img src="../static/img/kindpng_4649475.png" alt="">
+                <p class="p">Email</p>
+                <p>clothdonation4@gmail.com</p>
+            </div>
+        </div>
+    </section>
+    <div class="right">
+        <div class="head1">Send Message</div>
+        <div class="form">
+            <form action="/contact" method="post">
+                <div>
+                    <!-- <label for="name">name</label> -->
+                    name <input type="text" name="name" id="name">
+                </div><br>
+                <div>
+
+                    <div> email <input type="email" id="email" name="email"></div>
+                    <br>
+                    <textarea id="message" rows="5" placeholder="How can we help you"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</body>
+
+</html>

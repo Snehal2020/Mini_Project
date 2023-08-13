@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is home page</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<style>
+    .background1 {
+    background: rgba(0, 0, 0, 0.7) url('../static/img/d_back.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.sec1 {
+    padding-left: 450px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    font-size: 25px;
+    color: white;
+}
+
+h2 {
+    padding-left: 70px;
+}
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 20px;
+    font-size: 35px;
+
+}
+.opt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.opt p {
+    padding: 7px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 19px;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(8, 182, 8);
+}
+
+.opt a {
+    text-decoration: none;
+    color: white;
+}
+
+
+</style>
+<body>
+    {{>nav}}
+    
+    <div class="sec1 background1">
+        <h2>DONATE</h2>
+        <p class="thought">
+            Giving is the greatest act of grace
+        </p>
+      
+    </div>
+    <div class="sec">
+        <div class="hd">
+            How do you want to donate
+        </div>
+        <div class="opt">
+            <p class="opt1"><a href="/opt1"> Pickup from doorstep</a></p>
+            <p class="opt2"><a href="/opt2"> Receive verified NGO drop points</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
