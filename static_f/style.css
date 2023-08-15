@@ -12,7 +12,10 @@
     cursor: pointer;
     background-color: rgb(39, 35, 35);
 }
-
+.log{
+    position: relative;
+    left: 350px;
+}
 .navlist {
     display: flex;
 }
@@ -176,3 +179,105 @@ footer {
     background-size: cover;
     background-blend-mode: darken;
 }
+/* Registartion and login */
+.registration-form {
+    margin-top: 20px;
+    position: relative;
+    left: 350px;
+    background-color: #58b4fa;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px;
+  }
+
+  .registration-form h2 {
+    margin-bottom: 10px;
+  }
+
+  .registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+  }
+  .abc{
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+  }
+  .registration-form input[type="text"],
+    .registration-form input[type="email"],
+    .registration-form input[type="tel"],
+    .registration-form input[type="number"],
+    .registration-form input[type="password"] {
+      width: 380px;
+      padding: 5px;
+      margin-bottom: 1px;
+      border: 1px solid #bab7b7;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    .registration-form button {
+      background-color: #3956f8;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .registration-form button:hover {
+      background-color: #0056b3;
+    }
+
+   
+    .login-form {
+      position:relative;
+      left: 500px;
+      top: 90px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      width: 300px;
+    }
+
+    .login-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 1px;
+      font-size: 14px;
+    }
+
+    .login-form button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+ 
