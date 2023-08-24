@@ -29,6 +29,11 @@ var opt2Schema = new mongoose.Schema({
     email: String,
 });
 var Opt2 = mongoose.model('Opt2', opt2Schema);
+var otpSchema = new mongoose.Schema({
+    otp:Number,
+    phone:Number
+});
+var Otp = mongoose.model('Otp', otpSchema);
 const regSchema = new mongoose.Schema({
     name: {
       type: String,
@@ -86,5 +91,5 @@ regSchema.methods.generateT = async function (next) {
 
   const Regcol = new mongoose.model("Regcol", regSchema)
 module.exports={
-    Opt1,Opt2,Contact,Join1,Regcol
+    Opt1,Opt2,Contact,Join1,Regcol,Otp
 }
