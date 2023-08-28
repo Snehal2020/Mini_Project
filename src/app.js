@@ -1,4 +1,5 @@
 const express = require("express");
+const nodemailer = require('nodemailer');
 const twilio = require("twilio");
 require("dotenv").config()
 const cookieparser = require("cookie-parser")
@@ -96,6 +97,35 @@ app.get('/opt2', (req, res) => {
 app.post('/opt2', (req, res) => {
     var myData3 = new collect.Opt2(req.body);
     myData3.save().then(() => {
+        const user_email = req.body.email;
+        //_________________Email Send____________________________
+
+
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'snehallande99@gmail.com',
+                pass: 'zqiivvuvtuzlwdvx'
+            },
+        });
+        const mailOptions = {
+            from: 'snehallande99@gmail.com',
+            to: user_email,
+            subject: 'Details of verified NGO\'s',
+            text: 'Thank you Gauri for supporting us to help needy people \n Its because of thoughtful individuals like you that we are able to continue making a difference in the lives of those we serve \n\n Here are the details of the ngos which we have verified according to your donation \n\n',
+
+        };
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log('Error sending email:', error);
+            } else {
+                console.log('Email sent:', info.response);
+            }
+        });
+
+
+        //_________________End________________________________
+
         res.send("Your Cloth Donation Form Has Been Submitted Successfully !")
     }).catch(() => {
         res.status(400).send("Not saved")
